@@ -1,3 +1,3 @@
-"""Module providing a function printing python version."""
+"""Module providing a funct ion printing python version."""
 
 pass
