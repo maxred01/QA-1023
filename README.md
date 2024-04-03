@@ -1,5 +1,5 @@
 # QA-1023
-[![Pylint](https://github.com/maxred01/QA2823/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/maxred01/QA2823/actions/workflows/pylint.yml)  
+[![Pylint](https://github.com/maxred01/QA-1023/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/maxred01/QA-1023/actions/workflows/pylint.yml)  
 
 
 <div id="header" align="center">
