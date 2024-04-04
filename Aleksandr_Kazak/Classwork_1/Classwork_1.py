@@ -1,3 +1,2 @@
-"""Module providing a function printing python version."""
-
+# Модуль, предоставляющий функцию для печати версии Python.
 pass
