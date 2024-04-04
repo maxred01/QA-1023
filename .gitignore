@@ -1,5 +1,7 @@
 /venv/
 /.idea/
 /.github/
-/misc.xml/
-/QA-1023.iml/
+misc.xml
+QA-1023.iml
+.DS_Store
+.pytest_cache
