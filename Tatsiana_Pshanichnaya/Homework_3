@@ -1,0 +1,3 @@
+"""Module providing a funct ion printing python version."""
+
+pass
