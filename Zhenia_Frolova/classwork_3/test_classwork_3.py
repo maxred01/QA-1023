@@ -27,4 +27,4 @@ def test__api_user():
     with allure.step('Проверка статус кода'):
         check.equal(status_code, 201, f'Статус код не равен 200. Статус код равен {status_code}')
 
-        print(r.json())
+        print(r.json()
