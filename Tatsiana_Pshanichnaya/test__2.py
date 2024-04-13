@@ -1,8 +1,11 @@
-import requests, pytest, pytest_check as check, allure
+import requests
+import pytest_check as check
+import allure
+
 
 @allure.feature('Проверка/api/users')
 def test_2_api_status():
-    r = requests.get('https://reqres.in/api/users/23')
+    r = requests.get('https://reqres.in/api/users/23', timeout=10)
     status_code = r.status_code
 
     with allure.step('Проверка статус кода'):
