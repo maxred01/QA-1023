@@ -7,4 +7,4 @@ import pytest
 def test_example(first_name, second_name):
     print(first_name)
     print(second_name)
-# [missing-final-newline]
+ # [missing-final-newline]
