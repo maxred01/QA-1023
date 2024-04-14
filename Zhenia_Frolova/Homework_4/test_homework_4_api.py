@@ -6,4 +6,3 @@ def test_api_users_page():
 
     check.equal(status_code, 404, f'Статус код не равен 200. Статус код равен {status_code}')
 
-    data = r.json()
