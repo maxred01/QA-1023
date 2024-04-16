@@ -5,7 +5,7 @@ import pytest_check as check
 
 @allure.feature("Проверка статус кода https://hoster.by/")
 def test_api_status_code():
-    r = requests.get('https://hoster.by/', timeout=5)
+    r = requests.get('https://hoster.by/', timeout=10)
     status_code = r.status_code
 
     with allure.step("Проверка статус-кода ответа"):
