@@ -25,6 +25,7 @@ def test_api_users_page():
             "job": "Senior cleaner"
             }
     r = requests.post('https://reqres.in/api/users', data=data, timeout=10)
+
     status_code = r.status_code
 
     with allure.step('step 1'):
@@ -34,4 +35,5 @@ def test_api_users_page():
         new_user_data = r.json()
         check.equal(new_user_data['name'], 'Vasya', 'Name is wrong.')
         check.equal(new_user_data['job'], 'Senior cleaner', 'Job is wrong.')
+
     # print(r.json())
