@@ -9,7 +9,7 @@ def test_api_status_code():
     status_code = r.status_code
 
     with allure.step("Проверка статус-кода ответа"):
-        check.equal(r.status_code, 200, f'Статус код {r.status_code}')
+        check.equal(r.status_code, 200, f'Статус код {status_code}')
 
     with allure.step('Проверка url'):
         check.equal(r.url, 'https://hoster.by/')
