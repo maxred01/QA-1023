@@ -16,4 +16,5 @@ def test_api_user():
 
     with allure.step('Вывод JSON'):
         txt = r.url
-        allure.attach(txt, name='Мой файл результат ответа', attachment_type=allure.attachment_type.TEXT)
+        allure.attach(txt, name='Мой файл результат ответа',
+                      attachment_type=allure.attachment_type.TEXT)
