@@ -8,7 +8,7 @@ class UsersPage:
     def __init__(self):
         """Инициализация с базовым URL для пользовательских методов"""
         self.sessions = requests.Session()
-        self.sessions.headers.update({'Accept': 'application/json'})  # Если api имеет специфический заголовок
+        self.sessions.headers.update({'Accept': 'application/json'})  # Если api имеет спец заголовок
         self.users_url = f"{BASE_URL}/users"
 
     def _requests(self, method, url, **kwargs):
