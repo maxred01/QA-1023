@@ -13,6 +13,7 @@ def test_api_status_code():
     with allure.step('Check url adr'):
         check.equal(response.url, 'https://hoster.by/')
 
-    # with allure.step('Check url adr'):
-    #     print(response.headers)
-    #     allure.attach()
+    with allure.step('Headers'):
+        allure.attach(response.headers, name='headers', attachment_type=allure.attachment_type.TEXT)
+        some_data = response.headers
+        print(some_data)
