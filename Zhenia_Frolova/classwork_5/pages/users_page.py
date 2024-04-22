@@ -14,7 +14,7 @@ class UsersPage:
     def _requests(self, method, url, **kwargs):
         try:
             response = self.sessions.request(method, url, **kwargs)
-            response.raise_for_status()  # Поднимает HTTP ошибку если статус ответа 400 или 500
+            response.raise_for_status()  # Поднимает HTTP ошибку, если статус ответа 400 или 500
             return response
         except requests.exceptions.RequestException as e:
             print(e)
