@@ -1,0 +1,10 @@
+selenium - old
+playwright - ~4 years, more cool, bc async
+
+
+apium(?) for mobile devices
+
+locators (most popular):
+ - xpath - example: /div/div/span[3]/div/p
+ - css - example: div
+ - id is most reliable, but devs indicate it rarely
