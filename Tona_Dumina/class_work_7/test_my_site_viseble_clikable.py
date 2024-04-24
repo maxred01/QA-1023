@@ -37,3 +37,4 @@ def test_is_displayed():
             assert elements.is_displayed() == True
 
     driver.close()
+
