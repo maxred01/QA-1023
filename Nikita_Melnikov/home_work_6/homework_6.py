@@ -11,7 +11,7 @@ driver.get('https://hoster.by/service/domains/')
 
 input_search_box = driver.find_element(By.XPATH, '//section//*[@name="domain_name"]')
 
-input_search_box.send_keys('nikitamelnikov.by')
+input_search_box.send_keys('https://nikitamelnikov.by')
 
 input_search_button = driver.find_element(By.XPATH, '//*[@id="domain"]')
 
