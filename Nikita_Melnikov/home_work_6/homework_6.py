@@ -17,6 +17,6 @@ input_search_button = driver.find_element(By.XPATH, '//*[@id="domain"]')
 
 input_search_button.click()
 
-time.sleep(30)
+time.sleep(5)
 
 driver.close()
