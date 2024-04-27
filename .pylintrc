@@ -16,6 +16,7 @@ disable=
     F0001,
     C0304
 
+[MASTER]
 ignore=/Maksim_Tsybulka/
 
 [FORMAT]
