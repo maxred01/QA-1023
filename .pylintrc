@@ -16,8 +16,7 @@ disable=
     F0001,
     C0304
 
-[MASTER]
-ignore=Maksim_Tsybulka
+ignore=Maksim_Tsybulka/example_ui
 
 [FORMAT]
 max-line-length=120
