@@ -25,13 +25,14 @@ for input_field in input_fields:
     menu_items = driver.find_elements(By.CSS_SELECTOR, ".auto-complete__menu-item")
 
     # Проверяем, что хотя бы один элемент в списке соответствует ожидаемому значению
-    expected_value = "Sri Lanka"
-    found_value = False
+    EXPECTED_VALUE = "Sri Lanka"
+    FOUND_VALUE = False
     for menu_item in menu_items:
-        if expected_value in menu_item.text:
-            found_value = True
+        if EXPECTED_VALUE in menu_item.text:
+            FOUND_VALUE = True
             break
-    assert found_value, f"Expected value '{expected_value}' not found in dropdown menu for input field with placeholder '{input_field.get_attribute('placeholder')}'"
+    assert FOUND_VALUE, (f"Expected value '{EXPECTED_VALUE}' not found in dropdown menu"
+                         f" for input field with placeholder '{input_field.get_attribute('placeholder')}'")
 
 # Закрываем браузер
 driver.quit()
