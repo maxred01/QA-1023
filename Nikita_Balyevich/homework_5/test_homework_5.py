@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup as Bs
 @allure.description("Test check status code, URL and pade title")
 @allure.tag("hoster.by", "status_code", "url_check", "title_check")
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.label("owner","QA")
+@allure.label("owner", "QA")
 @allure.link("https://hoster.by/", name="Testing_Site")
 @allure.issue("https://github.com/maxred01/QA-1023/wiki/HomeWork_5", name="Issue_Link")
 @allure.testcase("https://github.com/maxred01/QA-1023/wiki/HomeWork_5", name="TestCase_Link")
