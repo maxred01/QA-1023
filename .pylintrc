@@ -17,7 +17,7 @@ disable=
     C0304
 
 [MASTER]
-ignore=/Maksim_Tsybulka/
+ignore=Maksim_Tsybulka
 
 [FORMAT]
 max-line-length=120
