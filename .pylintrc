@@ -17,3 +17,6 @@ disable=
     C0304
 
 ignore=Maksim_Tsybulka
+
+[FORMAT]
+max-line-length=120
