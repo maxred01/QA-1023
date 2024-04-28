@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 import allure
 import pytest_check as check
 
+
 @allure.story('Тесты проверки элементов на сайте')
 @allure.feature('Проверка главной страницы')
 def test_is_displayed():
