@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 
 driver = webdriver.Chrome()
-driver.set_window_size(1920,1080)
+driver.set_window_size(1920, 1080)
 
 driver.get('https://hoster.by/service/domains/')
 
