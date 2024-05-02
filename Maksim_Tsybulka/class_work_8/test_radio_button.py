@@ -16,8 +16,12 @@ def test_is_displayed():
     driver.get("https://demoqa.com/radio-button")
 
     header_elements = [
-        (driver.find_element(By.ID, 'yesRadio'), driver.find_element(By.XPATH, '(//div[@class="custom-control custom-radio custom-control-inline"])[1]'), 'Yes'),
-        (driver.find_element(By.ID, 'impressiveRadio'), driver.find_element(By.XPATH, '(//div[@class="custom-control custom-radio custom-control-inline"])[2]'), 'Impressive')
+        (driver.find_element(By.ID, 'yesRadio'),
+         driver.find_element(By.XPATH, '(//div[@class="custom-control custom-radio custom-control-inline"])[1]'),
+         'Yes'),
+        (driver.find_element(By.ID, 'impressiveRadio'),
+         driver.find_element(By.XPATH, '(//div[@class="custom-control custom-radio custom-control-inline"])[2]'),
+         'Impressive')
     ]
     for elements_select, elements_click, elements_text in header_elements:
         with allure.step(f'Проверка элемента "{elements_text}" на кликабельность'):

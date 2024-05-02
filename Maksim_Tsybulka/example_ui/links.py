@@ -28,7 +28,18 @@ not_implemented_link = driver.find_element_by_link_text("Not Implemented")
 broken_link = driver.find_element_by_id("broken-link")
 
 # Проверка каждой ссылки на наличие ошибок
-for link in [home_link, created_link, no_content_link, moved_link, bad_request_link, unauthorized_link, forbidden_link, not_found_link, internal_server_error_link, service_unavailable_link, not_implemented_link, broken_link]:
+for link in [home_link,
+             created_link,
+             no_content_link,
+             moved_link,
+             bad_request_link,
+             unauthorized_link,
+             forbidden_link,
+             not_found_link,
+             internal_server_error_link,
+             service_unavailable_link,
+             not_implemented_link,
+             broken_link]:
     link.click()
     if "Error" in driver.title:
         print(f"Ссылка {link.text} содержит ошибку!")

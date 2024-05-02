@@ -39,7 +39,8 @@ def test_is_displayed():
         submit_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'submit')))
         submit_button.click()
 
-        output_data = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="border col-md-12 col-sm-12"]')))
+        border = '//div[@class="border col-md-12 col-sm-12"]'
+        output_data = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, border)))
         output_text = output_data.text
 
         check.is_in(USER_NAME, output_text)
