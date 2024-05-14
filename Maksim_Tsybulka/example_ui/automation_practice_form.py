@@ -15,41 +15,23 @@ class DemoQaFormTest(unittest.TestCase):
     def test_fill_form(self):
         driver = self.driver
 
-        first_name = "John"
-        first_name_field = driver.find_element(By.ID, "firstName")
-        first_name_field.send_keys(first_name)
+        driver.find_element(By.ID, "firstName").send_keys("John")
+        driver.find_element(By.ID, "lastName").send_keys("Doe")
+        driver.find_element(By.ID, "userEmail").send_keys("johndoe@example.com")
 
-        last_name = "Doe"
-        last_name_field = driver.find_element(By.ID, "lastName")
-        last_name_field.send_keys(last_name)
+        driver.find_element(By.XPATH, '//label[@for="gender-radio-1"]').click()
 
-        email = "johndoe@example.com"
-        email_field = driver.find_element(By.ID, "userEmail")
-        email_field.send_keys(email)
+        driver.find_element(By.ID, "userNumber").send_keys("1234567890")
+        driver.find_element(By.ID, "dateOfBirthInput").send_keys("01 Jan 1990")
+        driver.find_element(By.ID, "dateOfBirthInput").send_keys(Keys.ENTER)
 
-        gender_button = driver.find_element(By.XPATH, '//label[@for="gender-radio-1"]')
-        gender_button.click()
+        driver.find_element(By.ID, "subjectsInput").send_keys("Maths")
+        driver.find_element(By.ID, "subjectsInput").send_keys(Keys.ENTER)
+        driver.find_element(By.ID, "subjectsInput").send_keys("English")
+        driver.find_element(By.ID, "subjectsInput").send_keys(Keys.ENTER)
 
-        phone_number = "1234567890"
-        phone_number_field = driver.find_element(By.ID, "userNumber")
-        phone_number_field.send_keys(phone_number)
-
-        birthdate_field = driver.find_element(By.ID, "dateOfBirthInput")
-        birthdate_field.send_keys("01 Jan 1990")
-        birthdate_field.send_keys(Keys.ENTER)
-
-        subjects_input = driver.find_element(By.ID, "subjectsInput")
-        subjects_input.send_keys("Maths")
-        subjects_input.send_keys(Keys.ENTER)
-        subjects_input.send_keys("English")
-        subjects_input.send_keys(Keys.ENTER)
-
-        hobbies_checkbox = driver.find_element(By.XPATH, '//label[@for="hobbies-checkbox-1"]')
-        hobbies_checkbox.click()
-
-        address = "123 Main Street, New York"
-        address_field = driver.find_element(By.ID, "currentAddress")
-        address_field.send_keys(address)
+        driver.find_element(By.XPATH, '//label[@for="hobbies-checkbox-1"]').click()
+        driver.find_element(By.ID, "currentAddress").send_keys("123 Main Street, New York")
 
         state_dropdown = driver.find_element(By.ID, "state")
         state_dropdown.click()
@@ -68,16 +50,16 @@ class DemoQaFormTest(unittest.TestCase):
         wait.until(EC.visibility_of_element_located((By.ID, "example-modal-sizes-title-lg")))
 
         result_name = driver.find_element(By.XPATH, '//table/tbody/tr[1]/td[2]').text
-        self.assertEqual(f"{first_name} {last_name}", result_name)
+        self.assertEqual(f"{'John'} {'Doe'}", result_name)
 
         result_email = driver.find_element(By.XPATH, '//table/tbody/tr[2]/td[2]').text
-        self.assertEqual(email, result_email)
+        self.assertEqual("johndoe@example.com", result_email)
 
         result_phone = driver.find_element(By.XPATH, '//table/tbody/tr[4]/td[2]').text
-        self.assertEqual(phone_number, result_phone)
+        self.assertEqual("1234567890", result_phone)
 
         result_address = driver.find_element(By.XPATH, '//table/tbody/tr[6]/td[2]').text
-        self.assertEqual(address, result_address)
+        self.assertEqual("123 Main Street, New York", result_address)
 
     def tearDown(self):
         self.driver.quit()

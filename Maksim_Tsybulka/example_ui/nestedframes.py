@@ -1,7 +1,7 @@
-import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
 
 class NestedFramesTest(unittest.TestCase):
 
@@ -20,6 +20,7 @@ class NestedFramesTest(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
+
 
 if __name__ == "__main__":
     unittest.main()

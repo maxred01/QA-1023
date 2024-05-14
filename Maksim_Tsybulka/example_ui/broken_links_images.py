@@ -32,7 +32,7 @@ else:
 try:
     broken_link.click()
     print("Ссылка не сломана!")
-except:
+except FileExistsError:
     print("Ссылка содержит ошибку!")
 
 # Закрытие браузера

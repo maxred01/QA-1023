@@ -21,7 +21,8 @@ date_input.clear()
 date_input.send_keys("06/16/2023")
 
 # Ожидаем отображения выбранной даты
-WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element_value((By.CSS_SELECTOR, "#datePickerMonthYearInput"), "06/16/2023"))
+DATE_LOC = "#datePickerMonthYearInput"
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element_value((By.CSS_SELECTOR, DATE_LOC), "06/16/2023"))
 
 # Получаем все кнопки изменения даты
 date_buttons = driver.find_elements(By.CSS_SELECTOR, ".react-datepicker__navigation")
@@ -31,7 +32,8 @@ date_buttons[1].click()
 date_buttons[0].click()
 
 # Ожидаем отображения выбранной даты
-WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element_value((By.CSS_SELECTOR, "#datePickerMonthYearInput"), "07/16/2022"))
+DATE_PIC = "#datePickerMonthYearInput"
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element_value((By.CSS_SELECTOR, DATE_PIC), "07/16/2022"))
 
 # Закрываем браузер
 driver.quit()
