@@ -300,3 +300,4 @@ class ManyWebElements(WebElement):
 
         # Make screen-shot of the page:
         self._web_driver.save_screenshot(file_name)
+        
