@@ -1,8 +1,11 @@
-import requests, pytest, pytest_check as check, allure
+import requests
+# import pytest
+import pytest_check as check
+import allure
 
 
-#@allure.feature ('Проверка /api/users/2')
-#def test_api_users_page():
+# @allure.feature ('Проверка /api/users/2')
+# def test_api_users_page():
 #    r = requests.get('https://reqres.in/api/users/2')
 #    status_code = r.status_code
 #
@@ -27,4 +30,4 @@ def test__api_user():
     with allure.step('Проверка статус кода'):
         check.equal(status_code, 201, f'Статус код не равен 200. Статус код равен {status_code}')
 
-        print(r.json()
+        print(r.json())
