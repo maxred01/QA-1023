@@ -33,8 +33,8 @@ def run_allure():
     return render_template('welcome.html', text=out, json=out)
 
 
-@app.route("/run")
-def run():
+@app.route("/run_ui")
+def run_ui():
     """ Эта функция запуская и отвечает за тесты страницы /example. """
 
     cmd = ["./scriptsh/run_aut_lk.sh"]
